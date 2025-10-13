@@ -1,205 +1,247 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dr. Luiz Guilherme A. de Freitas | Oftalmologista – Retina e Catarata</title>
-  <meta name="description" content="Oftalmologista em Recife, especialista em Retina e Catarata. Informações, locais de atendimento e agendamento de consulta." />
-  <meta name="keywords" content="oftalmologista, retina, catarata, Recife, consulta, cirurgia" />
-  <link rel="canonical" href="https://www.seu-dominio.com.br/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Dr. Luiz Guilherme A. de Freitas – Retina e Catarata" />
-  <meta property="og:description" content="Atendimento em Recife. Agende sua consulta e veja os locais de trabalho." />
-  <meta property="og:image" content="assets/og-image.jpg" />
-  <meta property="og:url" content="https://www.seu-dominio.com.br/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Dr. Luiz Guilherme A. de Freitas – Retina e Catarata" />
-  <meta name="twitter:description" content="Atendimento em Recife. Agende sua consulta e veja os locais de trabalho." />
-  <meta name="twitter:image" content="assets/og-image.jpg" />
-  <link rel="icon" href="favicon.ico" />
+  <title>Dr. Luiz Guilherme (Ligui) Freitas – Oftalmologista (Retina e Catarata)</title>
+  <meta name="description" content="Dr. Luiz Guilherme Freitas – Oftalmologista, especialista em Retina e Catarata. Atendimento humanizado e baseado em evidências científicas." />
+  <meta name="color-scheme" content="light dark">
   <style>
-    :root{
-      --bg: #0b0f14; --card: #0f1621; --muted: #95a3b3; --accent: #15b374; --accent-2: #2563eb;
-      --text: #e6edf3; --ring: rgba(21,179,116,.35); --shadow: 0 10px 30px rgba(0,0,0,.35);
-      --radius: 18px; --maxw: 960px;
+    :root {
+      --bg: #0b1020; /* azul-escuro elegante */
+      --surface: #10172a;
+      --text: #e6ecff;
+      --muted: #a7b3d1;
+      --accent: #63b3ed; /* azul médico clean */
+      --accent-2: #34d399; /* verde saúde */
+      --card: #0e1426;
+      --border: #223055;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;background: radial-gradient(1200px 800px at 80% -10%, rgba(37,99,235,.15), transparent 60%),
-                  radial-gradient(900px 600px at -10% 10%, rgba(21,179,116,.12), transparent 60%), var(--bg);
-      color:var(--text);font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial;
-      -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", "Noto Sans", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text); background: linear-gradient(180deg, var(--bg), #0c132a 50%, #0b1020 100%);
+      -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
     }
-    .wrap{max-width: var(--maxw);margin: 40px auto 100px;padding: 20px;}
-    header.card{display:grid;grid-template-columns: 120px 1fr;gap: 20px;align-items:center;
-      background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00)), var(--card);
-      border: 1px solid rgba(255,255,255,.06);border-radius: var(--radius);padding: 22px;box-shadow: var(--shadow);}
-    .avatar{width:110px;height:110px;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
-    .avatar img{width:100%;height:100%;object-fit:cover}
-    h1{margin:0;font-size:1.6rem;letter-spacing:.3px}
-    .subtitle{color:var(--muted); margin-top:6px}
-    .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .badge{font-size:.85rem;padding:6px 10px;border:1px solid rgba(255,255,255,.10);border-radius:999px;color:#d2d9e0;background:rgba(255,255,255,.03)}
-    .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
-    .btn{appearance:none;border:none;cursor:pointer;border-radius:12px;padding:12px 16px;font-weight:600;display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:white;transition:.2s transform, .2s box-shadow}
-    .btn svg{width:18px;height:18px}
-    .btn.whatsapp{background:var(--accent)}
-    .btn.doctoralia{background:var(--accent-2)}
-    .btn:hover{transform:translateY(-1px); box-shadow: 0 8px 20px rgba(0,0,0,.25)}
-    .grid{display:grid; gap:20px; margin-top:22px}
-    @media(min-width:860px){.grid{grid-template-columns: 1.2fr .8fr}}
-    .section{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow)}
-    .section h2{margin:0 0 10px 0; font-size:1.2rem}
-    ul.clean{list-style:none;padding:0;margin:8px 0}
-    ul.clean li{padding:6px 0;border-bottom:1px dashed rgba(255,255,255,.07)}
-    ul.clean li:last-child{border-bottom:0}
-    .clinics{display:grid;gap:12px}
-    .clinic{border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:14px;background:rgba(255,255,255,.02)}
-    .clinic h3{margin:0;font-size:1.05rem}
-    .clinic small{color:var(--muted)}
-    .clinic .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
-    footer{max-width:var(--maxw);margin:26px auto;padding:0 20px;color:var(--muted);font-size:.95rem}
-    .sticky-cta{position:fixed;left:0;right:0;bottom:0;background:rgba(15,22,33,.92);backdrop-filter: blur(6px);border-top:1px solid rgba(255,255,255,.08);padding:10px;display:flex;gap:10px;z-index:50}
-    .sticky-cta .btn{flex:1;justify-content:center}
-    @media(min-width:860px){.sticky-cta{display:none}}
-    :focus-visible{outline:3px solid var(--ring); outline-offset:2px; border-radius:12px}
-  </style>
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
+    .container { width: min(1100px, 92%); margin: 0 auto; }
+    header {
+      position: sticky; top: 0; z-index: 40; backdrop-filter: blur(10px);
+      background: linear-gradient( to bottom, rgba(11,16,32,.85), rgba(11,16,32,.55));
+      border-bottom: 1px solid var(--border);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: .2px; }
+    .logo {
+      width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; font-weight: 800;
+      background: radial-gradient(120% 120% at 20% 20%, #1f6feb, #46c2ff 60%, #73ffcf);
+      color: #081220; box-shadow: var(--shadow);
+    }
+    .menu a { margin-left: 18px; color: var(--muted); font-weight: 600; }
+    .menu a:hover { color: var(--text); }
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Physician",
-    "name": "Dr. Luiz Guilherme Azevedo de Freitas",
-    "description": "Oftalmologista – Especialista em Retina e Catarata em Recife.",
-    "medicalSpecialty": ["Ophthalmology", "Retina", "Cataract"],
-    "url": "https://www.seu-dominio.com.br/",
-    "image": "assets/foto-perfil.jpg",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Rua dos Arcos, 60. Sala 06 - Poço da Panela, Recife - PE, 52061-180",
-      "addressLocality": "Recife",
-      "addressRegion": "PE",
-      "addressCountry": "BR"
-    },
-    "sameAs": [
-      "https://www.instagram.com/seuusuario",
-      "https://www.linkedin.com/in/seuusuario",
-      "https://www.facebook.com/seuusuario",
-      "https://maps.app.goo.gl/KeVLdGWPJWvLPyZu7"
-    ],
-    "availableService": [
-      {"@type":"MedicalTherapy","name":"Tratamento de doenças da retina"},
-      {"@type":"MedicalProcedure","name":"Cirurgia de catarata"}
-    ],
-    "telephone": "+5581991402900"
-  }
-  </script>
+    .hero { padding: 72px 0 54px; }
+    .hero-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 28px; align-items: center; }
+    .badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 10px; border: 1px solid var(--border); border-radius: 999px; font-size: 12px; color: var(--muted); background: #0b1225; }
+    h1 { font-size: clamp(28px, 5vw, 48px); line-height: 1.1; margin: 14px 0 12px; }
+    .subtitle { font-size: clamp(16px, 2.4vw, 18px); color: var(--muted); max-width: 60ch; }
+    .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+    .btn { display: inline-flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 12px; font-weight: 700; border: 1px solid var(--border); background: #0e152b; }
+    .btn.primary { background: linear-gradient(135deg, var(--accent), #8fd7ff); color: #081220; border: none; }
+    .btn.primary:hover { filter: brightness(1.05); }
+    .btn.ghost:hover { border-color: #2d4b8a; }
+    .card { background: linear-gradient(180deg, var(--card), #0a1020); border: 1px solid var(--border); border-radius: 18px; padding: 18px; box-shadow: var(--shadow); }
+    .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 18px; }
+    .kpi h3 { margin: 6px 0 4px; font-size: 26px; }
+    .kpi p { margin: 0; color: var(--muted); font-size: 13px; }
+
+    section { padding: 54px 0; }
+    h2 { font-size: clamp(22px, 4.5vw, 32px); margin: 0 0 14px; }
+    .grid { display: grid; gap: 16px; }
+
+    .services { grid-template-columns: repeat(3, 1fr); }
+    .service h3 { margin: 8px 0 6px; font-size: 18px; }
+    .service p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .about { grid-template-columns: 1fr 1fr; }
+
+    .clinics { grid-template-columns: repeat(2, 1fr); }
+    .clinic h4 { margin: 6px 0; }
+    .clinic p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    footer { border-top: 1px solid var(--border); padding: 28px 0; color: var(--muted); font-size: 14px; }
+
+    @media (max-width: 900px) {
+      .hero-grid, .services, .about, .clinics { grid-template-columns: 1fr; }
+      .kpis { grid-template-columns: 1fr 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .kpis { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
 </head>
 <body>
-  <div class="wrap">
-    <header class="card" aria-label="Cartão profissional">
-      <div class="avatar" aria-hidden="true">
-        <img src="assets/foto-perfil.jpg" alt="Foto do Dr. Luiz Guilherme Azevedo de Freitas" />
-      </div>
-      <div>
-        <h1>Dr. Luiz Guilherme Azevedo de Freitas</h1>
-        <div class="subtitle">Oftalmologista – Especialista em Retina e Catarata • Recife – PE</div>
-        <div class="badges">
-          <span class="badge">Fellowship – CEROF/FM/UFG</span>
-          <span class="badge">Mestre e Doutor – UFG</span>
-          <span class="badge">SBRV • CBO</span>
-        </div>
-        <div class="cta-row" role="group" aria-label="Ações principais">
-          <a class="btn whatsapp" href="https://wa.me/5581991402900?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" rel="noopener" aria-label="Agendar via WhatsApp">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.5 3.5A10 10 0 0 0 3.2 16.7L2 22l5.4-1.2A10 10 0 1 0 20.5 3.5Zm-8.4 15.8c-1.7 0-3.3-.5-4.7-1.5l-.3-.2-3 .7.6-3.1-.2-.3a8 8 0 1 1 7.6 4.4Zm4.5-5.9c-.2-.1-1.3-.7-1.4-.8s-.3-.1-.5 0-.5.6-.6.8-.3.2-.5.1a6.7 6.7 0 0 1-3.1-2.7c-.2-.4.2-.4.5-1 .1-.2 0-.4 0-.5l-.2-.5c-.1-.2-.3-.5-.5-.5h-.4c-.1 0-.4 0-.6.2-.2.1-.7.7-.7 1.7s.8 2 1 2.2c.1.2 1.6 2.5 3.9 3.4.5.2.9.3 1.2.4.5.1 1 0 1.4 0 .4 0 1.3-.5 1.5-1 .2-.5.2-.9.1-1 0-.2-.2-.2-.3-.3Z" fill="currentColor"/></svg>
-            Agendar via WhatsApp
-          </a>
-          
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">LF</div>
+        <div>
+          Dr. Luiz Guilherme (Ligui) Freitas
+          <div style="font-weight:600; font-size:12px; color: var(--muted);">Oftalmologista – Retina & Catarata</div>
         </div>
       </div>
-    </header>
-
-    <div class="grid">
-      <section class="section" aria-labelledby="sobre">
-        <h2 id="sobre">Sobre mim</h2>
-        <p>Oftalmologista com foco em retina clínica e cirúrgica e cirurgia de catarata. Atendimento humanizado, diagnóstico preciso e tecnologia de ponta.</p>
-        <ul class="clean" aria-label="Credenciais">
-          <li>Fellowship em Retina – CEROF/FM/UFG</li>
-          <li>Mestre e Doutor em Ciências da Saúde – UFG</li>
-          <li>Membro Titular – Sociedade Brasileira de Retina e Vítreo (SBRV)</li>
-          <li>Membro – Conselho Brasileiro de Oftalmologia (CBO)</li>
-        </ul>
-        <h2 style="margin-top:16px">Principais serviços</h2>
-        <ul class="clean" aria-label="Serviços">
-          <li>Tratamento de doenças da retina (DMRI, DM, oclusões venosas)</li>
-          <li>Cirurgia de catarata (lentes intraoculares premium sob avaliação)</li>
-          <li>Injeções intravítreas e terapias anti-VEGF</li>
-          <li>Exames especializados (OCT, Angiografia, etc.)</li>
-        </ul>
-      </section>
-
-      <section class="section" aria-labelledby="locais">
-        <h2 id="locais">Locais de atendimento</h2>
-        <div class="clinics">
-          <div class="clinic">
-            <h3>Viw Oftalmologia <small>• Rua dos Arcos, 60. Sala 06 - Poço da Panela, Recife - PE, 52061-180</small></h3>
-            <div class="row" role="group" aria-label="Ações Viw Oftalmologia">
-              <a class="btn" style="background:#334155" href="https://maps.app.goo.gl/KeVLdGWPJWvLPyZu7" target="_blank" rel="noopener" aria-label="Ver no Google Maps – Viw Oftalmologia">
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s7-6.1 7-12A7 7 0 0 0 5 10c0 5.9 7 12 7 12Zm0-9a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" fill="currentColor"/></svg>
-                Ver no Google Maps
-              </a>
-              <a class="btn" style="background:#475569" href="tel:+558133142578" aria-label="Ligar para Viw Oftalmologia">
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 3.9c.3-.8 1.2-1.1 2-.8l1.6.7c.7.3 1 .9.9 1.6l-.2 1c-.1.5.1 1 .5 1.3l2.8 2.2c.4.3.9.4 1.3.2l1-.3c.7-.2 1.4.1 1.7.7l.9 1.7c.4.8.1 1.7-.6 2.1-1.7 1-3.8 1.6-5.8.9-2.2-.8-4.8-3.2-6.1-5.2-1.1-1.7-1.4-3.5-1-5.2Z" fill="currentColor"/></svg>
-                Ligar
-              </a>
-            </div>
-          </div>
-          <div class="clinic">
-            <h3>Hospital de Olhos Santa Luzia <small>• Estrada do Encanamento, 909 - Recife - PE</small></h3>
-            <div class="row" role="group" aria-label="Ações Santa Luzia">
-              <a class="btn" style="background:#334155" href="https://maps.app.goo.gl/PUYbKdJRRPYwFzGr9" target="_blank" rel="noopener" aria-label="Ver no Google Maps – Santa Luzia">
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s7-6.1 7-12A7 7 0 0 0 5 10c0 5.9 7 12 7 12Zm0-9a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" fill="currentColor"/></svg>
-                Ver no Google Maps
-              </a>
-              <a class="btn" style="background:#475569" href="tel:+558121219100" aria-label="Ligar para Hospital de Olhos Santa Luzia">
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 3.9c.3-.8 1.2-1.1 2-.8l1.6.7c.7.3 1 .9.9 1.6l-.2 1c-.1.5.1 1 .5 1.3l2.8 2.2c.4.3.9.4 1.3.2l1-.3c.7-.2 1.4.1 1.7.7l.9 1.7c.4.8.1 1.7-.6 2.1-1.7 1-3.8 1.6-5.8.9-2.2-.8-4.8-3.2-6.1-5.2-1.1-1.7-1.4-3.5-1-5.2Z" fill="currentColor"/></svg>
-                Ligar
-              </a>
-            </div>
-          </div>
-        </div>
-        <p style="margin-top:8px"><strong>Contatos (marcação):</strong> Viw: (81) 99140-2900 • (81) 3314-2578 &nbsp;|&nbsp; HOSL: (81) 2121-9100</p>
-      </section>
+      <nav class="menu" aria-label="Principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#clinicas">Clínicas</a>
+        <a href="#contato">Contato</a>
+      </nav>
     </div>
+  </header>
 
-    <section class="section" aria-labelledby="contatos" style="margin-top:20px">
-      <h2 id="contatos">Contatos & redes</h2>
-      <div class="cta-row" role="group" aria-label="Contatos e redes">
-        <a class="btn" style="background:#22c55e" href="https://wa.me/5581991402900" target="_blank" rel="noopener" aria-label="WhatsApp">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.5 3.5A10 10 0 0 0 3.2 16.7L2 22l5.4-1.2A10 10 0 1 0 20.5 3.5Z" fill="currentColor"/></svg>
-          WhatsApp
-        </a>
-        <a class="btn" style="background:#1d4ed8" href="https://www.doctoralia.com.br/seu-perfil" target="_blank" rel="noopener" aria-label="Doctoralia">Doctoralia</a>
-        <a class="btn" style="background:#111827" href="mailto:viwoftalmo@gmail.com" aria-label="E-mail">E-mail</a>
-        <a class="btn" style="background:#db2777" href="https://www.instagram.com/seuusuario" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
-        <a class="btn" style="background:#0a66c2" href="https://www.linkedin.com/in/seuusuario" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
-        <a class="btn" style="background:#0ea5e9" href="https://maps.app.goo.gl/KeVLdGWPJWvLPyZu7" target="_blank" rel="noopener" aria-label="Google Maps">Google Maps</a>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="badge">Atendimento humanizado • Evidência científica</span>
+          <h1>Saúde ocular com foco em Retina e Catarata</h1>
+          <p class="subtitle">Mestre e Doutor em Ciências da Saúde (UFG). Fellowship em Retina Clínica e Cirúrgica (CEROF/FM/UFG). Membro da Sociedade Brasileira de Retina e Vítreo e do CBO.</p>
+          <div class="cta">
+            <a class="btn primary" href="https://wa.me/5581991402900" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+            <a class="btn ghost" href="#contato">Falar com a equipe</a>
+          </div>
+          <div class="kpis">
+            <div class="card kpi">
+              <h3>Retina</h3>
+              <p>DMRI, Retinopatia Diabética, Oclusões Venosas</p>
+            </div>
+            <div class="card kpi">
+              <h3>Catarata</h3>
+              <p>Cirurgia personalizada e segura</p>
+            </div>
+            <div class="card kpi">
+              <h3>Diagnóstico</h3>
+              <p>OCT, Angiografia, Mapeamento de Retina</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <img src="foto-luiz.jpg" alt="Dr. Luiz Guilherme Freitas" style="width:100%; height:420px; object-fit:cover; border-radius:12px;" />
+            <p style="margin:10px 0 0; color: var(--muted); font-size:12px;">Foto: Dr. Luiz Guilherme (Ligui) Freitas.</p>
+            <p style="margin:10px 0 0; color: var(--muted); font-size:12px;">Imagem meramente ilustrativa.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <footer>
-      © <span id="y"></span> Dr. Luiz Guilherme Azevedo de Freitas • CRM/PE 16006 • RQE 5634
-    </footer>
-  </div>
+    <section id="servicos">
+      <div class="container">
+        <h2>Principais serviços</h2>
+        <div class="grid services">
+          <div class="card service">
+            <h3>Retina clínica</h3>
+            <p>Tratamento de DMRI, retinopatia diabética, edema macular, uveítes e doenças vítreo-maculares.</p>
+          </div>
+          <div class="card service">
+            <h3>Cirurgia de Catarata</h3>
+            <p>Planejamento individualizado com foco em qualidade visual e recuperação rápida.</p>
+          </div>
+          <div class="card service">
+            <h3>Exames</h3>
+            <p>OCT, angiografia fluoresceínica, ultrassonografia ocular, biomicroscopia e mapeamento de retina.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <div class="sticky-cta" role="region" aria-label="Agendamento rápido">
-    <a class="btn whatsapp" href="https://wa.me/5581991402900?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" rel="noopener">Agendar WhatsApp</a>
-    
-  </div>
+    <section id="sobre">
+      <div class="container">
+        <h2>Sobre o médico</h2>
+        <div class="grid about">
+          <div class="card">
+            <p style="margin:0; color: var(--muted); font-size:16px; line-height:1.75">
+              Sou oftalmologista com atuação focada em retina e catarata. Meu objetivo é unir acolhimento, tecnologia e medicina baseada em evidências para oferecer o melhor desfecho visual possível para cada paciente.
+            </p>
+            <ul style="margin:14px 0 0; padding-left:18px; color: var(--muted);">
+              <li>Fellowship em Retina Clínica e Cirúrgica – CEROF/FM/UFG</li>
+              <li>Mestre e Doutor em Ciências da Saúde – UFG</li>
+              <li>Membro Titular – Sociedade Brasileira de Retina e Vítreo</li>
+              <li>Membro – Conselho Brasileiro de Oftalmologia</li>
+            </ul>
+          </div>
+          <div class="grid" style="gap:16px">
+            <div class="card"><strong>Abordagem</strong><br><span style="color:var(--muted)">Cuidado individualizado, informação clara e decisões compartilhadas.</span></div>
+            <div class="card"><strong>Tecnologia</strong><br><span style="color:var(--muted)">Equipamentos modernos para diagnóstico e tratamento de alta precisão.</span></div>
+            <div class="card"><strong>Ciência</strong><br><span style="color:var(--muted)">Tratamentos alinhados às melhores evidências e às diretrizes atuais.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="clinicas">
+      <div class="container">
+        <h2>Locais de atendimento</h2>
+        <div class="grid clinics">
+          <div class="card clinic">
+            <h4>Hospital de Olhos Santa Luzia</h4>
+            <p>Rua dos Arcos, 60 – Galeria Poço da Panela, Loja 06<br>Poço da Panela – Recife/PE – 52061-180 – Brasil</p>
+            <p><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Rua%20dos%20Arcos%2C%2060%2C%20Po%C3%A7o%20da%20Panela%2C%20Recife%20-%20PE%2C%2052061-180" target="_blank" rel="noopener">Ver no mapa</a></p>
+            <p><a href="#contato">Agendar consulta</a></p>
+          </div>
+          <div class="card clinic">
+            <h4>Viw Oftalmologia</h4>
+            <p>Rua dos Arcos, 60 – Galeria Poço da Panela, Loja 06<br>Poço da Panela – Recife/PE – 52061-180 – Brasil</p>
+            <p><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Rua%20dos%20Arcos%2C%2060%2C%20Po%C3%A7o%20da%20Panela%2C%20Recife%20-%20PE%2C%2052061-180" target="_blank" rel="noopener">Ver no mapa</a></p>
+            <p><a href="#contato">Agendar consulta</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <div class="container">
+        <h2>Contato</h2>
+        <div class="grid" style="grid-template-columns: 1.1fr .9fr;">
+          <div class="card">
+            <p style="margin:0 0 10px; color: var(--muted)">Para agendamentos e informações, fale com nossa equipe.</p>
+            <ul style="list-style:none; padding:0; margin:0; display:grid; gap:10px;">
+              <li><strong>WhatsApp:</strong> <a href="https://wa.me/5581991402900" target="_blank" rel="noopener">Clique para conversar</a></li>
+              <li><strong>E‑mail:</strong> <a href="mailto:viwoftalmo@gmail.com">viwoftalmo@gmail.com</a></li>
+            </ul>
+            <div class="cta" style="margin-top:16px">
+              <a class="btn primary" href="https://wa.me/5581991402900" target="_blank" rel="noopener">Agendar agora</a>
+              <a class="btn ghost" href="mailto:viwoftalmo@gmail.com">Enviar e‑mail</a>
+            </div>
+          </div>
+          <div class="card">
+            <p style="margin:0 0 8px; color: var(--muted)">Você também pode enviar uma mensagem pelo formulário (opcional — pode ser integrado ao Formspree, Getform, etc.).</p>
+            <form onsubmit="event.preventDefault(); alert('Formulário demonstrativo. Configure um serviço de formulário para receber as mensagens.');">
+              <div style="display:grid; gap:10px;">
+                <input required placeholder="Seu nome" style="padding:12px 14px; border-radius:10px; border:1px solid var(--border); background:#0b1225; color:var(--text)" />
+                <input required type="email" placeholder="Seu e‑mail" style="padding:12px 14px; border-radius:10px; border:1px solid var(--border); background:#0b1225; color:var(--text)" />
+                <textarea required rows="4" placeholder="Sua mensagem" style="padding:12px 14px; border-radius:10px; border:1px solid var(--border); background:#0b1225; color:var(--text)"></textarea>
+                <button class="btn primary" type="submit">Enviar mensagem</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex; gap:12px; justify-content:space-between; align-items:center; flex-wrap:wrap;">
+      <div>© <span id="year"></span> Dr. Luiz Guilherme (Ligui) Freitas. Todos os direitos reservados.</div>
+      <div style="opacity:.9">CRM/PE – 16006 • RQE – 5634</div>
+    </div>
+  </footer>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
