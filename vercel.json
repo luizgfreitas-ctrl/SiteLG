@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.luizgfreitas.com.br"
+        }
+      ],
+      "destination": "https://luizgfreitas.com.br/$1",
+      "permanent": true
+    }
+  ]
+}
